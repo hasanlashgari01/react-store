@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        font-family: "IRANYekanFN Medium";
+    }
+}
+
+@layer components {
+    .tab__btn {
+        @apply flex flex-col justify-center items-center flex-1 gap-1 text-gray-600 font-light transition-all ease-linear cursor-pointer;
+    }
+
+    .tab__btn.active {
+        @apply text-green-600;
+    }
+
+    .tab__icon {
+        @apply text-xl;
+    }
+
+    .tab__btn span {
+        @apply text-xs;
+    }
+
+    .pagination {
+        @apply flex justify-center gap-3 mt-10 font-sans select-none;
+    }
+
+    .pagination > .item {
+        @apply inline-flex justify-center items-center w-10 disabled:bg-emerald-500 aspect-square border border-emerald-300 rounded-md cursor-pointer;
+    }
+}
